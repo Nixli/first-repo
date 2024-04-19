@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="password" id="password" placeholder="密码">
+    <img src="./img/close.png" alt="" id="close" onclick="changeType()">
+
+
+</body>
+<script>
+    function changeType() {
+        var password = document.getElementById('password');
+        var close = document.getElementById('close');
+        if (password.type == 'password') {
+            password.type = 'text';
+            close.src = './img/open.png';
+        } else {
+            password.type = 'password';
+        }
+    }
+</script>
+
+</html>
