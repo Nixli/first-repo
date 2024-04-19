@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <input type="text" name="num1" id="num1">
+    <input type="text" name="num2" id="num2">
+    <button id="btnadd">加</button>
+    <button id="btnsub">减</button>
+    <button id="btnmul">乘</button>
+    <button id="btndiv">除</button>
+    <div id="result"></div>
 </body>
+<script>
+    //请完成上述加减乘除
+    var num1 = document.getElementById('num1');
+    var num2 = document.getElementById('num2');
+    var btnadd = document.getElementById('btnadd');
+    var btnsub = document.getElementById('btnsub');
+    var btnmul = document.getElementById('btnmul');
+    var btndiv = document.getElementById('btndiv');
+    var result = document.getElementById('result');
+    btnadd.onclick = function () {
+        result.innerHTML = parseInt(num1.value) + parseInt(num2.value);
+    }
+    btnsub.onclick = function () {
+        result.innerHTML = parseInt(num1.value) - parseInt(num2.value);
+    }
+    btnmul.onclick = function () {
+        result.innerHTML = parseInt(num1.value) * parseInt(num2.value);
+    }
+    btndiv.onclick = function () {
+        result.innerHTML = parseInt(num1.value) / parseInt(num2.value);
+    }
+
+</script>
+
 </html>
