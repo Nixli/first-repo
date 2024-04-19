@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function allChecked() {
+        //获取所有的input标签
+        var all_input = document.getElementsByTagName("input");//数组
+        //指向获取所有的hobby
+        var hobby = document.getElementsByName("hobby");//数组
+        //获取
+        var all_checked = document.getElementById("all").checked;
+        //循环给赋值 所有 hobby
+        for (i = 0; i < hobby.length; i++) {
+            hobby[i].checked = all_checked;
+        }
+        console.log(all_checked);
+        console.log(all_input);
+        console.log(hobby);
+    }
+    
+    function withoutCheak() {
+        var without_checked = document.getElementById("without").checked;
+        var hobby = document.getElementsByName("hobby");
+        for (i = 0; i < hobby.length; i++) {
+            if (hobby[i].checked == true) {
+                hobby[i].checked = false;
+            } else {
+                hobby[i].checked = true;
+            }
+        }
+        console.log(without_checked);
+        console.log(hobby);
+        
+    }
+    
+</script>
+
+<body>
+    <input type="checkbox" value="all" id="all" onclick="allChecked()"><label>全选</label>
+    <input type="checkbox" value="without" id="without" onclick="withoutCheak()">反选
+    <br />
+    <input type="checkbox" value="sing" name="hobby" id="sing">唱
+    <input type="checkbox" value="jump" name="hobby" id="jump">跳
+    <input type="checkbox" value="rap" name="hobby" id="rap">rap
+    <input type="checkbox" value="basketball" name="hobby" id="basketball">篮球
+
+
+</body>
+
+</html>
